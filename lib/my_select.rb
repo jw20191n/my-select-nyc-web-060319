@@ -1,11 +1,13 @@
 def my_select(collection)
-  if collection.length != 0 
+  if collection.length > 0 
      i = 0 
      while i < collection.length do
        yield(collection[i])
        i += 1
      end
      collection
+  else
+    puts "empty collection!"
   end
   
 end
