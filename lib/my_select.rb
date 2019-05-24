@@ -4,11 +4,10 @@ def my_select(collection)
      new_collection = [ ]
      
      while i < collection.length do
-       yield(collection[i])
-       
+       new_collection << yield(collection[i])
        i += 1
      end
-     collection
+     new_collection
   else
     puts "empty collection!"
   end
